@@ -1,6 +1,6 @@
 function getBotResponse() {
   var rawText = $("#textInput").val();
-  var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+  var userHtml = '<p class="text userText"><span>' + rawText + "</span></p>";
   $("#textInput").val("");
   $("#chatbox").append(userHtml);
   document
@@ -12,7 +12,7 @@ function getBotResponse() {
   $.get("/get", {
     msg: rawText
   }).done(function (data) {
-    var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+    var botHtml = '<p class="text botText"><span>' + data + "</span></p>";
     $("#chatbox").append(botHtml);
     document
       .getElementById("userInput")
@@ -30,6 +30,6 @@ $(document).ready(function () {
   });
   $("#clearBtn").click(function () {
     $("#textInput").val("");
-    document.getElementById('chatbox').innerHTML = '<p class="botText"><span>Hi! I am Candice your personal ChatBot!</span></p>';
+    document.getElementById('chatbox').innerHTML = "<p class=\"text botText\"><span>Hi! I'm Candice your personal ChatBot!</span></p>";
   });
 });
