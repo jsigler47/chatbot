@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>Candice</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<body>
+	<div class="header">
+		<h1>A chatbot!</h1>
+		<p>This is the header</p>
+	</div>
+	<div class="menu">
+		<button id="clearBtn">Clear Chat</button>
+	</div>
+	<div class="boxed">
+		<div>
+			<div id="chatbox">
+				<p class="botText">
+					<span>Hi! I'm Candice your personal ChatBot!</span>
+				</p>
+			</div>
+			<div id="userInput">
+				<input id="textInput" type="text" name="msg" placeholder="Message" />
+			</div>
+		</div>
+	</div>
+	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
